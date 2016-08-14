@@ -27,7 +27,7 @@ IP=`wget -qO- http://ip.alf.nu/`
 ./ManiaPlanetServer $@ \
 	/nodaemon \
   /forceip=$IP:${PORT-2350} \
-  /dedicated_cfg=default.xml \
+  /dedicated_cfg=config.xml \
   >/dev/null &
 
 # The rest of this file is a workaround for the non-tty bug...

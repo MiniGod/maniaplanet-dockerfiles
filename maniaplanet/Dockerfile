@@ -12,7 +12,7 @@ RUN         apt-get update -qq \
 &&          apt-get -yqq clean
 
 # Download and unzip
-# 
+#
 # Topic with all versions
 #   https://forum.maniaplanet.com/viewtopic.php?f=261&t=12494
 RUN         wget http://files.maniaplanet.com/ManiaPlanet3Beta/ManiaPlanetBetaServer_2015-06-16.zip -qO /tmp/mps.zip \
@@ -20,8 +20,8 @@ RUN         wget http://files.maniaplanet.com/ManiaPlanet3Beta/ManiaPlanetBetaSe
 &&          rm /tmp/mps.zip \
 &&          rm -rf *.bat *.exe *.html RemoteControlExamples/
 
-# Rename dedicated_cfg.default.txt to dedicated.cfg
-COPY        ./config.default.xml /maniaplanet/UserData/Config/default.xml
+# Copy the default dedicated_cfg file
+COPY        ./config.default.xml /maniaplanet/UserData/Config/config.xml
 
 # Need a custom script to start it up to be able to run multiple servers at the same time (port issues)
 # This is better explained inside runner.sh
