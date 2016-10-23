@@ -49,10 +49,3 @@ wait $serverPID
 
 # Then kill tail
 kill $tailPID
-
-
-# TODO
-
-# docker run \
-#   -e PORT=2355 -p2355 -p2355/udp
-# docker run -e PORT=2355 -p2355:2350 -p2355:2350/udp
