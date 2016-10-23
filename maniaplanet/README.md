@@ -56,7 +56,7 @@ To run your own dedicated_cfg: `docker run -v /where/my/config/is/dedicated_cfg.
 _note: when using a custom config file, make sure you set `xmlrpc_allowremote` to `True` so that xaseco or the likes can connect_
 
 The maps are in `/maniaplanet/UserData/Maps/`. To replace this directory with your own maps directory from the host, use the [volume docker option][docker:runvolume]: `docker run -v /where/my/maps/are:/maniaplanet/UserData/Maps -e POR....`  
-This will also include your match settings files, so now you can, for instance, add `/game_settings=playlist.txt` to use your own match settings.
+This will also include your match settings files, so now you can, for instance, add `/game_settings=MatchSettings/maplist.txt` to use your own match settings.
 
 ### Example: Run your existing server in docker
 ```
@@ -67,7 +67,7 @@ docker run \
   --name smserver \                               # name the container
   minigod/maniaplanet \                           # the image to run (this image)
   /title=SMStorm \                                # The titlepack to use
-  /game_settings=playlist.txt                     # Which matchsettings to use
+  /game_settings=MatchSettings/maplist.txt        # Which matchsettings to use
 ```
 
 
